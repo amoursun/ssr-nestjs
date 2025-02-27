@@ -1,21 +1,32 @@
 {
+  "compileOnSave": true,
   "compilerOptions": {
+    "baseUrl": ".",
+    "target": "ES2018",
     "module": "commonjs",
-    "declaration": true,
-    "removeComments": true,
-    "emitDecoratorMetadata": true,
+    "moduleResolution": "node",
     "experimentalDecorators": true,
-    "allowSyntheticDefaultImports": true,
-    "target": "ES2023",
-    "sourceMap": true,
-    "outDir": "./dist",
-    "baseUrl": "./",
-    "incremental": true,
+    "emitDecoratorMetadata": true,
+    "inlineSourceMap":true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "stripInternal": true,
     "skipLibCheck": true,
-    "strictNullChecks": true,
-    "forceConsistentCasingInFileNames": true,
-    "noImplicitAny": false,
-    "strictBindCallApply": false,
-    "noFallthroughCasesInSwitch": false
-  }
+    "esModuleInterop": true,
+    "pretty": true,
+    "declaration": true,
+    "jsx": "react-jsx",
+    "outDir": "dist",
+    "typeRoots": [ "./typings", "./node_modules/@types"],
+    "paths": {
+      "~/*": ["./*"],
+      "@/*": ["./web/*"],
+      "~src/*": ["./src/*"],
+      "_build/*": ["./build/*"]
+    }
+  },
+  "include": [
+    "src",
+    "web"
+  ]
 }
