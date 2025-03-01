@@ -7,7 +7,7 @@ import { useStore } from 'ssr-common-utils'
 export default function Index(props: SProps) {
 	const { indexState: state } = useStore<{ indexState: IData }>()
 	return (
-		<div>
+		<div className="index-page-container">
 			<Search></Search>
 			{state?.indexData?.data?.[0]?.components ? (
 				<div>

@@ -9,7 +9,7 @@ import { useStore } from 'ssr-common-utils'
 export default function Detail(props: SProps) {
 	const { detailState: state } = useStore<{ detailState: Ddata }>()
 	return (
-		<div>
+		<div className="detail-page">
 			<Search></Search>
 			{state?.detailData?.data[0].dataNode ? (
 				<div>
