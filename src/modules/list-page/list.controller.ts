@@ -16,7 +16,7 @@ interface ListQuery {
 }
 @Controller('/')
 export class ListController {
-    // 校招、实习生列表页面
+    // 校招、实习生列表页
     @Get('/list')
     @Header(
         'Content-Type', 'text/html; charset=utf-8'
@@ -34,7 +34,7 @@ export class ListController {
     }
 
 
-    // 社招页面
+    // 社招页
     @Get('/social-list')
     @Header(
         'Content-Type', 'text/html; charset=utf-8'

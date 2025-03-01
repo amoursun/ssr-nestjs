@@ -8,16 +8,12 @@ export class CenterController {
     handlerCenter(@CsrPage({apiService: ApiCenterService}) csrPage: string) {
         return csrPage;
     }
-    @Get('/social-center')
-    handlerSocialCenter(@CsrPage({apiService: ApiCenterService}) csrPage: string) {
+    @Get('/a-center')
+    handlerACenter(@CsrPage({apiService: ApiCenterService}) csrPage: string) {
         return csrPage;
     }
-    @Get('/resume/:type')
-    handlerResume(@CsrPage({apiService: ApiCenterService}) csrPage: string) {
-        return csrPage;
-    }
-    @Get('/resume-view')
-    handlerResumeView(@CsrPage({apiService: ApiCenterService}) csrPage: string) {
+    @Get('/b-center/:type')
+    handlerBCenter(@CsrPage({apiService: ApiCenterService}) csrPage: string) {
         return csrPage;
     }
 }
