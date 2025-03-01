@@ -21,11 +21,11 @@ async function bootstrap(): Promise<void> {
         // 关于csp的配置参考：https://developer.mozilla.org/zh-CN/docs/Web/HTTP/CSP
         contentSecurityPolicy: process.env.NODE_ENV === 'production' ? {
             directives: {
-                defaultSrc: ['\'self\'', '*.baidu.com', '*.bcebos.com'],
-                styleSrc: ['\'self\'', '*.baidu.com', '\'unsafe-inline\'', 'http:'],
-                scriptSrc: ['\'self\'', '*.baidu.com', '\'unsafe-inline\'', 'http:'],
+                defaultSrc: ['\'self\'', '*.xxx.com', '*.yyy.com'],
+                styleSrc: ['\'self\'', '*.xxx.com', '\'unsafe-inline\'', 'http:'],
+                scriptSrc: ['\'self\'', '*.xxx.com', '\'unsafe-inline\'', 'http:'],
                 // 添加data协议，部分图片会被转成base64
-                imgSrc: ['\'self\'', '*.baidu.com', '*.bcebos.com', 'data:'],
+                imgSrc: ['\'self\'', '*.xxx.com', '*.yyy.com', 'data:'],
                 // 关闭自动升级https，在本地需要http，在测试或生产环境本身是https,也无需升级
                 upgradeInsecureRequests: null,
             },
